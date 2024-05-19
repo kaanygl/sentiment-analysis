@@ -251,51 +251,50 @@ body {
     }
   }
 
-/* Navbar container */
+
 #c29kecvks9 {
-    background-color: #ffffff; /* Arka plan rengi */
-    padding: 10px; /* Kenar boşluğu */
-    display: flex; /* Flexbox kullanarak öğeleri yatay düzende hizala */
-    justify-content: space-between; /* Öğeleri aralarında boşluk bırakarak düzenle */
-    align-items: center; /* Öğeleri dikey eksende hizala */
+    background-color: #ffffff; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
   }
   
-  /* Logo ve başlık */
+ 
   .um-nav-children {
-    display: flex; /* Flexbox kullanarak öğeleri yatay düzende hizala */
-    align-items: center; /* Öğeleri dikey eksende hizala */
+    display: flex; 
+    align-items: center;
   }
   
   .um-nav-children a {
-    text-decoration: none; /* Bağlantı altını çizme */
-    color: #333333; /* Metin rengi */
-    font-size: 16px; /* Metin boyutu */
+    text-decoration: none; 
+    color: #333333; 
+    font-size: 16px; 
   }
   
-  /* Logo stili */
+  
   ._8c82ce03 {
-    --scale: 1; /* Logo boyutu */
+    --scale: 1; 
   }
   
-  /* Menü bağlantıları */
   .um-nav-links {
-    list-style-type: none; /* Liste işaretini kaldır */
-    margin: 0; /* Kenar boşluğunu kaldır */
-    padding: 0; /* Dolgu boşluğunu kaldır */
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
   }
   
   .um-nav-links li {
-    display: inline-block; /* Öğeleri yatay düzende hizala */
-    margin-right: 20px; /* Sağ kenar boşluğu */
+    display: inline-block; 
+    margin-right: 20px; 
   }
   
   .um-nav-links li:last-child {
-    margin-right: 0; /* Son öğenin sağ kenar boşluğunu kaldır */
+    margin-right: 0;
   }
   
   .um-nav-links li a {
-    text-decoration: none; /* Bağlantı altını çizme */
-    color: #333333; /* Metin rengi */
+    text-decoration: none; 
+    color: #333333; 
     font-size: 16px;
   }
   ._5859e61e {

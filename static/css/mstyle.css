@@ -543,15 +543,15 @@ body {
     font-size: 1em;
   }
   .photos {
-    text-align: center; /* Yatayda ortala */
-    display: flex; /* Dikeyde ortala */
-    justify-content: center; /* Dikeyde ortala */
-    align-items: center; /* Dikeyde ortala */
-    height: 100vh; /* Sayfanın tamamına yayılmak için */
+    text-align: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
   }
   
   .photos div {
-    text-align: center; /* Yatayda içerikleri ortala */
+    text-align: center;
   }
   ._5b63a701 {
     position: relative;

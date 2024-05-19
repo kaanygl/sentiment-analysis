@@ -26,7 +26,6 @@
     <script src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
-    <!-- Navbar -->
     <nav id="c29kecvks9" class="_e45b5504 um-nav-wrapper um-classic um-hidden">
       <div class="um-nav-children">
         <div class="_32caed59" style="--gap: 1; font-size: 16px">
@@ -43,7 +42,7 @@
             >
           </a>
         </div>
-      </div>
+      </div class="um-links">
       <ul class="um-nav-links">
         <li><a href="{{ url_for('index') }}">Home</a></li>
         <li><a href="{{ url_for('reports') }}">Reports</a></li>
@@ -65,14 +64,11 @@
       </div>
     </nav>
 
-    <!-- Charts Container -->
     <div class="charts-container">
       <div class="chart-item">
         <form action="#">
           <div class="custom-select">
-            <select id="select-choice1" class="select">
-              <!-- Options will be populated dynamically -->
-            </select>
+            <select id="select-choice1" class="select"></select>
             <canvas id="myChart1" class="chart"></canvas>
           </div>
         </form>
@@ -80,9 +76,7 @@
       <div class="chart-item">
         <form action="#">
           <div class="custom-select">
-            <select id="select-choice2" class="select">
-              <!-- Options will be populated dynamically -->
-            </select>
+            <select id="select-choice2" class="select"></select>
             <canvas id="myChart2" class="chart"></canvas>
           </div>
         </form>
@@ -92,7 +86,6 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     <div class="content">
-      <!-- Dynamic Images from Database -->
       <div class="photos">
         <div>
           {% for image in images %}
@@ -108,7 +101,7 @@
         </div>
       </div>
     </div>
-    <!-- Footer -->
+
     <footer class="_c4b89fde">
       <div class="wr">
         <div class="_bea1daea">

@@ -198,7 +198,6 @@ header {
   cursor: pointer;
 }
 
-/* For Responsiveness of the page */
 
 @media screen and (max-width: 650px) {
   .container {

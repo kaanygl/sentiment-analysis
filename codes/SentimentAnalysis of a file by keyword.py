@@ -1,12 +1,10 @@
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-# Path of the xlsx file
 file_path = r"C:\*"
 df = pd.read_excel(file_path)
 
-# Column that includes the entries to be analyzed.
-sentences = df['Column_name'].tolist()
+sentences = df["Column_name"].tolist()
 
 keywords = ["keyword1", "keyword2", "keyword3"]
 
@@ -34,7 +32,9 @@ for sentence in sentences:
 
 
 if all_scores:
-    average_score = {'compound': sum(score['compound'] for score in all_scores) / len(all_scores)}
+    average_score = {
+        "compound": sum(score["compound"] for score in all_scores) / len(all_scores)
+    }
     print("\nGeneral Result:", average_score)
 else:
     print("No sentiment scores calculated. Check your input data.")
