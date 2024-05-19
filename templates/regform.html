@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2024 Turkey Local Election Sentiment Analysis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/regformstyle.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="{{ url_for('index') }}" class="back-button">&larr; Back</a>
+      <h1 class="heading">2024 Turkey Local Election Sentiment Analysis</h1>
+      <h3 class="title">Login & Registration Form</h3>
+    </header>
+
+    <div class="container">
+      <div class="btn">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+        <div class="slider"></div>
+      </div>
+
+      <div class="form-section">
+        <div class="login-box">
+          <form action="/login" method="post">
+            <input
+              type="email"
+              name="email"
+              class="ele"
+              placeholder="youremail@email.com"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              class="ele"
+              placeholder="password"
+              required
+            />
+            <button type="submit" class="clkbtn">Login</button>
+          </form>
+        </div>
+
+        <div class="signup-box">
+          <form action="/register" method="post">
+            <input
+              type="text"
+              name="username"
+              class="ele"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              class="ele"
+              placeholder="youremail@email.com"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              class="ele"
+              placeholder="password"
+              required
+            />
+            <input
+              type="password"
+              name="confirm_password"
+              class="ele"
+              placeholder="Confirm password"
+              required
+            />
+            <button type="submit" class="clkbtn">Sign Up</button>
+          </form>
+          <p>
+            Already have an account? <a href="#" class="login-link">Log in</a>
+          </p>
+          <div class="agreement-check">
+            <input
+              type="checkbox"
+              name="terms_of_service_and_privacy_policy"
+              required
+            />
+            <span class="terms-of-use-text">
+              I agree to Platform's <a href="#">Terms of Service</a> and
+              <a href="#">Privacy Policy</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/regformjs.js') }}"></script>
+  </body>
+</html>

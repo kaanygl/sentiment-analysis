@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>2024 Turkey Local Election Sentiment Analysis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mstyle.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="c29kecvks9" class="_e45b5504 um-nav-wrapper um-classic um-hidden">
+  <div class="um-nav-children">
+    <div class="_32caed59" style="--gap:1;font-size:16px"><a>
+        <div class="_8c82ce03" style="--scale:1"> 
+          <img src="/static/images/logo.png" class="_b9923f60" alt="logo">
+        </div><span class="_11650ac9">2024 Turkey Local Election Sentiment Analysis</span>
+      </a></div>
+  </div>
+  <ul class="um-nav-links">
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('reports') }}">Reports</a></li>
+  </ul>
+  <div class="um-nav-buttons">
+    {% if user %}
+      <span>Welcome, {{ user['username'] }}</span>
+      <button id="btn_logout" class="_e72e75b2 btn">
+        <span><a href="{{ url_for('logout') }}">Logout</a></span>
+      </button>
+    {% else %}
+      <button id="btn_login" class="_e72e75b2 btn">
+        <span><a href="{{ url_for('register') }}">Login</a></span>
+      </button>
+      <button id="btn_signup" class="_89517563 btn">
+        <span><a href="{{ url_for('register') }}">Sign-Up</a></span>
+      </button>
+    {% endif %}
+  </div>
+</nav>
+</nav>
+
+<section class="_df0d32a9">
+    <div class="wr">
+      <div class="_9eafc181">
+        <div class="_9edd5845">
+          <header class="_a26fd77c">
+            <h2 class="_b7b6e02e">Our Mission</h2>
+            <p class="_b2c32198"> Utilizing various methods to analyze, collect, and display social media users'
+               sentiments regarding the upcoming 2024 Turkish Local Elections: 
+              leveraging APIs from social media platforms,
+               implementing efficient data storage solutions, and developing a user-friendly website for simplified presentation of the results.
+            </p>
+          </header>
+          <ul class="_ce2658d4">
+            <li class="_b15170dd">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="um-icon _cdb96923"
+                fill="currentColor"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+              </svg>
+              <div class="_6ec344ec">
+                <span class="_c0d960e7">Live Data</span
+                ><span class="_6fa056c4"
+                  >Access real-time sentiment analysis from various
+                  demographics and regions across Turkey.</span
+                >
+              </div>
+            </li>
+            <li class="_b15170dd">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="um-icon _cdb96923"
+                fill="currentColor"
+                height="24"
+                width="24"
+                viewBox="0 0 512 512"
+              >
+              </svg>
+              <div class="_6ec344ec">
+                <span class="_c0d960e7">Deep Insights</span
+                ><span class="_6fa056c4"
+                  >Data-rich insights interpreting the electorate’s mood and
+                  voting trends through cutting-edge sentiment analysis.</span
+                >
+              </div>
+            </li>
+            <li class="_b15170dd">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="um-icon _cdb96923"
+                fill="currentColor"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                
+              </svg>
+              <div class="_6ec344ec">
+                <span class="_c0d960e7">Visual Stats</span
+                ><span class="_6fa056c4"
+                  >Interactive charts and graphs offer a visual representation
+                  of election sentiment shifts and patterns.</span
+                >
+              </div>
+            </li>
+          </ul>
+          <button id="btn_q2ef8nq61t" class="_745053d0 btn">
+            <span>Learn More</span>
+          </button>
+        </div>
+        <div class="_2a5dfebd">
+          <img
+            src="images/index.png"
+            class="_5c8ece1c"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="_58faed61">
+  <div class="wr">
+      <div class="_58077e3f">
+          <header class="_3b8ea6f8">
+              <h2 class="_4f92761b">Key Stats</h2>
+              <p class="_6347dd0e">Impressive statistics that highlight the precision and reach of our sentiment
+                  analysis in the 2024 Turkey Local Elections.</p>
+          </header>
+          <div class="_4e595ea5">
+              <div class="_9ba74c50">
+                  <div class="_4734bfb0"><span data-value="1,000" class="countup">1,000</span></div><span
+                      class="_b5937007">Polling Stations</span>
+              </div>
+              <div class="_9ba74c50">
+                  <div class="_4734bfb0"><span data-value="250,000" class="countup">250,000</span></div><span
+                      class="_b5937007">Verified Users</span>
+              </div>
+              <div class="_9ba74c50">
+                  <div class="_4734bfb0"><span data-value="150" class="countup">150</span></div><span
+                      class="_b5937007">Data Points</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="_5b63a701">
+  <div class="wr">
+      <header class="_9c707f72">
+          <h2 class="_eecc5363">Featured Analysis</h2>
+          <p class="_885f1456">The aim is to categorize public sentiment
+            as positive, negative, or neutral to understand the electorate's mood and opinions during the
+            election period.</p>
+      </header>
+      <div class="_e0512665">
+          <div class="_0c601ae6"><svg xmlns="http://www.w3.org/2000/svg" class="um-icon _c4b8df38"
+                  fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                
+              </svg>
+              <h3 class="_4f85a012">Data Collection and Preprocessing</h3>
+              <div class="_6ac4434e">Gathering content from various social media platforms, including Twitter, YouTube,
+                Instagram etc. related to the 2024 Turkish Local Elections. Once retrieved, the collected
+                data undergoes preprocessing steps.</div>
+          </div>
+          <div class="_0c601ae6"><svg xmlns="http://www.w3.org/2000/svg" class="um-icon _c4b8df38"
+                  fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                  
+                  
+        
+              </svg>
+              <h3 class="_4f85a012">Sentiment Analysis</h3>
+              <div class="_6ac4434e">Machine learning algorithms are used to analyze the sentiment expressed in the
+                collected social media posts or comments. These algoritms classify the sentiment of
+                each post. The analysis’ objective is to uncover senmtient trends and patterns within the
+                collected data.</div>
+          </div>
+          <div class="_0c601ae6"><svg xmlns="http://www.w3.org/2000/svg" class="um-icon _c4b8df38"
+                  fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                 
+              </svg>
+              <h3 class="_4f85a012">Visualization </h3>
+              <div class="_6ac4434e">Visualize sentiment trends over time and across different topics or entities related to the
+                Turkey Local Election.</div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="_6813642c">
+  <div class="wr">
+      <header class="_b8d07757">
+          <h2 class="_0892bb67">FAQs</h2>
+          <p class="_f45cac5c">Questions answered for our users who seek to understand complex data trends and the
+              scope of our analysis.</p>
+      </header>
+      <div class="_2ea42394">
+          <div class="_30c0d1b3">
+              <div class="_a4efb844">
+                  <h4 class="_f50447d1">How accurate is your sentiment analysis?</h4>
+                  <div class="_7de9d5a2">Our methodology ensures over 90% accuracy by cross-referencing with
+                      real-world polling data and trends.</div>
+              </div>
+              <div class="_a4efb844">
+                  <h4 class="_f50447d1">Can I access historical data?</h4>
+                  <div class="_7de9d5a2">Yes, our platform provides comprehensive access to historical sentiment
+                      analysis data for past elections.</div>
+              </div>
+              <div class="_a4efb844">
+                  <h4 class="_f50447d1">What sources do you use?</h4>
+                  <div class="_7de9d5a2">We utilize a wide range of sources, including social media, forums, news
+                      outlets, as well as direct polling feedback.</div>
+              </div>
+              <div class="_a4efb844">
+                  <h4 class="_f50447d1">How real-time is the data?</h4>
+                  <div class="_7de9d5a2">The sentiment data is updated continuously, providing as near to
+                      real-time insights as technically possible.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="_c4b89fde">
+  <div class="wr">
+      <div class="_bea1daea">
+          <div class="_240f2910"><span class="_c0e4633f">© 2024 </span>
+              <div class="_a6d0f97b" style="--scale:0.5"></div>
+              <div class="_379aefea"><a href="https://www.facebook.com/" class="_77e6fd5c"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"
+                          class="um-icon _2cd4f8c5">
+                          
+                      </svg></a><a href="https://www.instagram.com/" class="_77e6fd5c"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"
+                          class="um-icon _2cd4f8c5">
+                          
+                      </svg></a><a href="https://twitter.com/" class="_77e6fd5c"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24"
+                          class="um-icon _2cd4f8c5">
+                          
+                      </svg></a><a href="https://www.youtube.com/" class="_77e6fd5c"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24"
+                          class="um-icon _2cd4f8c5">
+                        
+                      </svg></a></div>
+              <div class="_370825cf umsoPluginTarget"></div>
+          </div>
+          <ul class="_d1a0a8ea">
+              <li class="_0fc50e27">
+                  <h4 class="_31f6b92b">Features</h4>
+                  <ul class="_91687afc">
+                      <li class="_e0485177"><a href="" class="_c288f4a7">Something Great</a></li>
+                      <li class="_e0485177"><a href="" class="_c288f4a7">Another Thing</a></li>
+                      <li class="_e0485177"><a href="" class="_c288f4a7">So many Features</a></li>
+                  </ul>
+              </li>
+              <li class="_0fc50e27">
+                  <h4 class="_31f6b92b">Company</h4>
+                  <ul class="_91687afc">
+                      <li class="_e0485177"><a href="" class="_c288f4a7">Blog</a></li>
+                      <li class="_e0485177"><a href="" class="_c288f4a7">About Us</a></li>
+                      <li class="_e0485177"><a href="" class="_c288f4a7">Contact</a></li>
+                      <li class="_e0485177"><a href="" class="_c288f4a7">Jobs</a></li>
+                  </ul>
+              </li>
+              <li class="_0fc50e27">
+                  <h4 class="_31f6b92b">Legal</h4>
+                  <ul class="_91687afc">
+                      <li class="_e0485177"><a href="/privacy-policy" class="_c288f4a7">Privacy Policy</a></li>
+                      <li class="_e0485177"><a href="/terms-of-use" class="_c288f4a7">Terms of USe</a></li>
+                      <li class="_e0485177"><a href="/cookie-policy" class="_c288f4a7">Cookie Policy</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</footer>
+</footer>
+
+
+</body>
+</html>
